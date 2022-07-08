@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="porto.css">
+        <title>Pramita Annuur S</title>
+        <style>
+            /* bentuk dan ukuran gambar */
+            img{
+                width: 200px;
+                border-radius: 20px;
+                margin-top: 12px;
+            }
+
+            /* meng-aplikasikan flex pada div yang berisi judul dan gambar */
+            .img-container{
+                display: flex;
+                align-items: center; /* mengatur ke posisi tengah */
+                flex-direction: column;
+            }
+
+            /* bentuk dan ukuran kedua tombol */
+            .btn{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+
+            /* warna tombol pada tampilan pertama website dibuka */
+            #btn1{
+                background-color: #498BC1;
+            }
+            #btn2{
+                background-color: #E9F0FA;
+            }
+
+            /* jarak tombol 1 terhadap tombol 2 */
+            #btn1{
+                margin-right: 14px;
+            }
+
+            /* meng-aplikasikan flex pada div yang sebenarnya button */
+            #container{
+                display: flex;
+                justify-content: center ;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="Salsa's Portofolio">
+            <table>
+                <tr>
+                    <td rowspan="3">
+                        <img src="foto diri.jpg" alt="foto diri"
+                        width="250px">
+                    </td>
+                    <td><h1>Pramita Annuur Salsabiila</h1></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Hey halo semua! Namaku <b>Pramita Annuur Salsabiila</b> tapi panggil aja <b>Salsa</b>.</h3> 
+                    <br><h3>Aku adalah salah satu rookie yang mengikuti kelas <u>Build a Website</u> di Summer Club 2022!</h3>
+                    <br><h3>Harapanku setelah aku belajar tentang cara membuat website, aku dapat <u >membuat website yang dapat membantu banyak orang</u> :D</h3>
+                </td>
+                </tr>
+            </table>
+
+         <p><h2>Pendidikan</h2></p>
+         <p><h4>Ar-Rahman Islamic School (2011-2016)</h4></p>
+         <table>
+            <td rowspan="2">
+                <img src="https://arrahman-islamic.sch.id/wp-content/uploads/2022/04/DSCF5019-1024x577.jpg" alt="foto gedung AIS"
+                width="250px">
+            </td>
+            <tr>
+            <td><h3>Aku mengenyam pendidikan sekolah dasar di <u>Ar-Rahman Islamic School</u></h3>
+            <br><h3>Selama bersekolah disana aku pernah mengikuti berbagai macam lomba seperti lomba robotic, FLS2N dan O2SN. Serta tergabung dalam pramuka inti.</h3>
+            </td>
+            </tr>
+         </table>
+         <p><h4>SMPN 85 Jakarta (2017-2020)</h4></p>
+         <table>
+            <td rowspan="2">
+                <img src="https://cdn-2.tstatic.net/jakarta/foto/bank/images/smpn-85-pondok-labu-jakarta-selatan-tetap-menggelar-ptm.jpg" alt="foto gedung SMPN 85"
+                width="250px">
+            </td>
+            <tr>
+            <td><h3>Aku melanjutkan pendidikanku di <u>SMPN 85 Jakarta</u></h3>
+            <br><h3>SMP, aku mengikuti lomba paduan suara tingkat kota dan berhasil memenangkan juara 5.</h3>
+            </td>
+            </tr>
+         </table>
+         <p><h4>SMAN 66 Jakarta (2021-sekarang)</h4></p>
+         <table>
+            <td rowspan="2">
+                <img src="https://www.panggungmodusoperandi.com/wp-content/uploads/2020/11/WhatsApp-Image-2020-11-23-at-11.35.49.jpeg" alt="foto gedung SMAN 66"
+                width="250px">
+            </td>
+            <tr>
+            <td><h3>Setelah liburan berakhir, aku akan duduk di bangku <u>kelas 12</u>!</h3>
+            <br><h3>Hingga saat ini, aku pernah mengikuti olimpiade bahasa Jepang dan FLS2N. Serta diberi kepercayaan menjadi ketua ekskul lukis yang bernama "Pervenche."</h3>
+            </td>
+            </tr>
+         </table>
+
+         <div class="img-container">
+            <h1 class="img-title"> Holiday Club </h1>
+            <img src="https://uploads-ssl.webflow.com/5f1b0e9334a5e4d17bffddba/60680e70771a1af575a8894b_image%20(15)-p-500.png">
+            <h1 class="img-title" hidden> Electives Lite </h1>
+            <img src="https://uploads-ssl.webflow.com/5f1b0e9334a5e4d17bffddba/60893ba8e8722bb55c947302_electiveslite.png" hidden>
+            </div>
+    
+            <br/>
+    
+            <div id="container">
+                <div id="btn1" class="btn" onclick="tombol1()"></div>
+                <div id="btn2" class="btn" onclick="tombol2()"></div>
+            </div>
+    
+            <!-- kode javascript -->
+            <script>
+                function tombol1(){
+                    // mengambil elemen dengan id 'btn1' yang sebenarnya tombol 1, kemudian dimasukkan kedalam suatu var
+                    tagButton = document.getElementById("btn1");
+                    // mengubah warna tombol satu
+                    tagButton.style="background-color:#498BC1;";
+    
+                    // lakukan hal yang sama terhadap tombol 2
+                    tagButton2 = document.getElementById("btn2");
+                    tagButton2.style="background-color:#E9F0FA;";
+    
+                    // membuat elemen dengan class 'img-title' yang sebenarnya adalah judul, [0] bertujuan memilih elemen pertama yang mempunyai class 'img-title', kemudian dibuat 'hidden=false' yang sebenarnya membuat tulisan nampak
+                    document.getElementsByClassName("img-title")[0].hidden=false;
+                    // membuat elemen dengan tag 'img' yang sebenarnya adalah gambar, [0] bertujuan memilih elemen pertama yang mempunyai tag 'img', kemudian dibuat 'hidden=false' yang sebenarnya membuat gambar nampak
+                    document.getElementsByTagName("img")[0].hidden=false;
+    
+                    // lakukan hal yang sama terhadap gambar dan judul kedua, cuma [0] nya dituker dan false/true dibalik aja
+                    document.getElementsByClassName("img-title")[1].hidden=true;
+                    document.getElementsByTagName("img")[1].hidden=true;
+    
+                    // mengecek apakah tombol 1 sudah tertekan, jika iya maka ketika kita inspect di browser dan membuka console akan muncul tulisan dibawah
+                    console.log("tombol 1 ditekan")
+                }
+                //lakukan hal yang sama terhadap button 2, dibalik aja :D
+                function tombol2(){
+                    tagButton = document.getElementById("btn1");
+                    tagButton.style="background-color:#E9F0FA;";
+                    tagButton2 = document.getElementById("btn2");
+                    tagButton2.style="background-color:#498BC1;";
+                    document.getElementsByClassName("img-title")[0].hidden=true;
+                    document.getElementsByTagName("img")[0].hidden=true;
+                    document.getElementsByClassName("img-title")[1].hidden=false;
+                    document.getElementsByTagName("img")[1].hidden=false;
+                    console.log("tombol 2 ditekan")
+                }
+            </script>
+
+         <p><h2>Proyek</h2></p>
+         <h3>
+         Website portofolio ini dibuat sebagai <b>final project</b> dari kelas Build a Website.
+         <br> Oiya, aku suka mengunggah karyaku <A href="https://www.instagram.com/tsushiin_/">disini</A> jangan lupa mampir ya! 'v')b
+         </h3>
+</html>

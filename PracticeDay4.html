@@ -1,0 +1,112 @@
+<!-- kode yang tadi diketik nabila -->
+<!-- kalo bingung liat aja komentar (tulisan berwarna hijau) nya ya! -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- pake link ini biar bisa pake font 'Source Sans Pro' -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- kode css -->
+        <style>
+            /* ukuran dan font judul */
+            .img-title{
+                font-family: 'Source Sans Pro', 'sans-serif';
+                font-size: 38px;
+                margin: 0%; /* supaya tidak ada jarak antara judul dan gambar */
+            }
+
+            /* bentuk dan ukuran gambar */
+            img{
+                width: 440px;
+                border-radius: 20px;
+                margin-top: 12px;
+            }
+
+            /* meng-aplikasikan flex pada div yang berisi judul dan gambar */
+            .img-container{
+                display: flex;
+                align-items: center; /* mengatur ke posisi tengah */
+                flex-direction: column;
+            }
+
+            /* bentuk dan ukuran kedua tombol */
+            .btn{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+
+            /* warna tombol pada tampilan pertama website dibuka */
+            #btn1{
+                background-color: #498BC1;
+            }
+            #btn2{
+                background-color: #E9F0FA;
+            }
+
+            /* jarak tombol 1 terhadap tombol 2 */
+            #btn1{
+                margin-right: 14px;
+            }
+
+            /* meng-aplikasikan flex pada div yang sebenarnya button */
+            #container{
+                display: flex;
+                justify-content: center ;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="img-container">
+        <h1 class="img-title"> Holiday Club </h1>
+        <img src="https://uploads-ssl.webflow.com/5f1b0e9334a5e4d17bffddba/60680e70771a1af575a8894b_image%20(15)-p-500.png">
+        <h1 class="img-title" hidden> Electives Lite </h1>
+        <img src="https://uploads-ssl.webflow.com/5f1b0e9334a5e4d17bffddba/60893ba8e8722bb55c947302_electiveslite.png" hidden>
+        </div>
+
+        <br/>
+
+        <div id="container">
+            <div id="btn1" class="btn" onclick="tombol1()"></div>
+            <div id="btn2" class="btn" onclick="tombol2()"></div>
+        </div>
+
+        <!-- kode javascript -->
+        <script>
+            function tombol1(){
+                // mengambil elemen dengan id 'btn1' yang sebenarnya tombol 1, kemudian dimasukkan kedalam suatu var
+                tagButton = document.getElementById("btn1");
+                // mengubah warna tombol satu
+                tagButton.style="background-color:#498BC1;";
+
+                // lakukan hal yang sama terhadap tombol 2
+                tagButton2 = document.getElementById("btn2");
+                tagButton2.style="background-color:#E9F0FA;";
+
+                // membuat elemen dengan class 'img-title' yang sebenarnya adalah judul, [0] bertujuan memilih elemen pertama yang mempunyai class 'img-title', kemudian dibuat 'hidden=false' yang sebenarnya membuat tulisan nampak
+                document.getElementsByClassName("img-title")[0].hidden=false;
+                // membuat elemen dengan tag 'img' yang sebenarnya adalah gambar, [0] bertujuan memilih elemen pertama yang mempunyai tag 'img', kemudian dibuat 'hidden=false' yang sebenarnya membuat gambar nampak
+                document.getElementsByTagName("img")[0].hidden=false;
+
+                // lakukan hal yang sama terhadap gambar dan judul kedua, cuma [0] nya dituker dan false/true dibalik aja
+                document.getElementsByClassName("img-title")[1].hidden=true;
+                document.getElementsByTagName("img")[1].hidden=true;
+
+                // mengecek apakah tombol 1 sudah tertekan, jika iya maka ketika kita inspect di browser dan membuka console akan muncul tulisan dibawah
+                console.log("tombol 1 ditekan")
+            }
+            //lakukan hal yang sama terhadap button 2, dibalik aja :D
+            function tombol2(){
+                tagButton = document.getElementById("btn1");
+                tagButton.style="background-color:#E9F0FA;";
+                tagButton2 = document.getElementById("btn2");
+                tagButton2.style="background-color:#498BC1;";
+                document.getElementsByClassName("img-title")[0].hidden=true;
+                document.getElementsByTagName("img")[0].hidden=true;
+                document.getElementsByClassName("img-title")[1].hidden=false;
+                document.getElementsByTagName("img")[1].hidden=false;
+                console.log("tombol 2 ditekan")
+            }
+        </script>
+    </body>
+</html>

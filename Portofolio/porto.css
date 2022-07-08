@@ -1,0 +1,29 @@
+body {
+    background-color: #9A8C98;
+}
+div {
+    height: 50px;
+}
+h1 {
+    color: #F2E9E4;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+}
+h2 {
+    color: #F2E9E4;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+h3 {
+    color: #F2E9E4;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+h4 {
+    color: #F2E9E4;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
